@@ -425,6 +425,11 @@ service irsc_util /system/bin/logwrapper /system/bin/irsc_util "/etc/sec_config"
     user root
     oneshot
 
+service mpdecision /system/bin/mpdecision --avg_comp
+    class main
+    user root
+    oneshot
+
 service map0 /system/bin/sdptool add --handle=0x1ff16 --channel=16 MAS0
     user bluetooth
     group bluetooth net_bt_admin

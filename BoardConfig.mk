@@ -89,6 +89,9 @@ BOARD_CUSTOM_BOOTIMG_MK := device/htc/a3/mkbootimg.mk
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Logging
+TARGET_USES_LOGD := false
+
 # Media
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 

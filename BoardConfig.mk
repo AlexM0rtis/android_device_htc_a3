@@ -65,6 +65,9 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 11676942336
 # Flags
 COMMON_GLOBAL_CFLAGS += -DHTCLOG
 
+# Fonts
+EXTENDED_FONT_FOOTPRINT := true
+
 # Graphics
 BOARD_EGL_CFG := device/htc/a3/configs/egl.cfg
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so

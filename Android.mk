@@ -14,11 +14,9 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := $(call my-dir)
+ifeq ($(TARGET_DEVICE),a3)
 
-ifeq ($(BOARD_VENDOR),htc)
-ifeq ($(TARGET_BOARD_PLATFORM),msm8226)
-include $(call all-subdir-makefiles,$(LOCAL_PATH))
+include $(call all-subdir-makefiles)
 
 include $(CLEAR_VARS)
 

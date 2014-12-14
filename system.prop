@@ -34,6 +34,17 @@ ro.product.front_camera = 1.3M
 # system props for the cne module
 persist.cne.feature=0
 
+# Audio
+audio.offload.buffer.size.kb=32
+audio.offload.gapless.enabled=true
+av.offload.enable=true
+av.streaming.offload.enable=true
+audio.offload.pcm.16bit.enable=true
+audio.offload.pcm.24bit.enable=true
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.speaker=true
+ro.qc.sdk.audio.fluencetype=fluence
+
 # GPS
 persist.gps.qc_nlp_in_use=0
 ro.gps.agps_provider=1

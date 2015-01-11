@@ -81,4 +81,3 @@ $(shell mkdir -p $(TARGET_OUT)/etc/firmware/wlan/prima; \
 	$(TARGET_OUT)/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
 
 endif
-endif

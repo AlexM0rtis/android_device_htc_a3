@@ -8,7 +8,7 @@ LOCAL_PATH := $(call my-dir)
 KERNEL_CONFIG := $(KERNEL_OUT)/.config
 A3_DTS_NAMES := msm8926
 
-A3_DTS_FILES = $(wildcard $(TOP)/$(TARGET_KERNEL_SOURCE)/arch/arm/boot/dts/msm8926-a3ul*.dts)
+A3_DTS_FILES = $(wildcard $(TOP)/$(TARGET_KERNEL_SOURCE)/arch/arm/boot/dts/msm8926-a3*.dts)
 A3_DTS_FILE = $(lastword $(subst /, ,$(1)))
 DTB_FILE = $(addprefix $(KERNEL_OUT)/arch/arm/boot/,$(patsubst %.dts,%.dtb,$(call A3_DTS_FILE,$(1))))
 ZIMG_FILE = $(addprefix $(KERNEL_OUT)/arch/arm/boot/,$(patsubst %.dts,%-zImage,$(call A3_DTS_FILE,$(1))))

@@ -24,13 +24,11 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
-$(call inherit-product, device/htc/a3ul/full_a3ul.mk)
+$(call inherit-product, device/htc/a3/full_a3.mk)
 
 # Device naming
-PRODUCT_DEVICE := a3ul
-PRODUCT_NAME := cm_a3ul
+PRODUCT_DEVICE := a3
+PRODUCT_NAME := cm_a3
 PRODUCT_BRAND := htc
 PRODUCT_MODEL := Desire 610
 PRODUCT_MANUFACTURER := HTC
-
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT="htc/htc_wwe/htc_a3ul:4.4.2/KOT49H/355312.1:user/release-keys" PRIVATE_BUILD_DESC="2.16.401.1 CL355312 release-keys"

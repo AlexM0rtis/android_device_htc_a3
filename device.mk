@@ -222,4 +222,4 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 $(call inherit-product-if-exists, frameworks/native/build/phone-hdpi-2048-dalvik-heap.mk)
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/htc/a3ul/a3ul-vendor.mk)
+$(call inherit-product-if-exists, vendor/htc/a3/a3-vendor.mk)

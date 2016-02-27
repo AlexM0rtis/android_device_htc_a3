@@ -74,9 +74,6 @@ persist.timed.enable=true
 persist.htc.audio.pcm.samplerate=48000
 persist.htc.audio.pcm.channels=2
 
-# System prop to select audio resampler quality
-af.resampler.quality=4
-
 #Buffer size in kbytes for compress offload playback
 audio.offload.buffer.size.kb=1024
 

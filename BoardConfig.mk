@@ -71,6 +71,10 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 11676942336
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
+# Fm 
+QCOM_FM_ENABLED := true 
+AUDIO_FEATURE_ENABLED_FM := true 
+
 # Graphics
 BOARD_EGL_CFG := device/htc/a3/configs/egl.cfg
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so

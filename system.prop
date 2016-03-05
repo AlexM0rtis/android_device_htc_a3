@@ -118,6 +118,7 @@ htc.alc.NORMAL_BURST_THRESHOLD=8
 htc.alc.STRESS_BURST_THRESHOLD=8
 
 # USB
+persist.sys.isUsbOtgEnabled=true
 persist.sys.usb.config=mtp
 
 #snapdragon value add features

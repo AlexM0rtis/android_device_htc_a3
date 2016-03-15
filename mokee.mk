@@ -20,18 +20,18 @@
 # definition file).
 #
 
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/mk/config/common_full_phone.mk)
 
 # $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
 $(call inherit-product, device/htc/a3/full_a3.mk)
 
 # CMHW
-BOARD_HARDWARE_CLASS := device/htc/a3/cmhw
+BOARD_HARDWARE_CLASS := device/htc/a3/mkhw
 
 # Device naming
 PRODUCT_DEVICE := a3
-PRODUCT_NAME := cm_a3
+PRODUCT_NAME := mk_a3
 PRODUCT_BRAND := htc
 PRODUCT_MODEL := Desire 610
 PRODUCT_MANUFACTURER := HTC

@@ -27,10 +27,10 @@
 # against the traditional rules of inheritance).
 
 # Inherit from common a5-common
--include device/htc/a5-common/BoardConfigCommon.mk
+-include device/htc/a3-common/BoardConfigCommon.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := htc_a5,htc_a5dwg,htc_a5dug,a5,a5dwg,a5dug
+TARGET_OTA_ASSERT_DEVICE := a3,a3ul,a3tl
 
 # Audio
 AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
@@ -38,12 +38,12 @@ AUDIO_FEATURE_HTC_DUAL_SIM := true
 
 # RIL
 BOARD_PROVIDES_LIBRIL := true
-BOARD_RIL_CLASS := ../../../device/htc/a5dwg/ril
+#BOARD_RIL_CLASS := ../../../device/htc/a5dwg/ril
 
 # Vendor Init
 TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_a5dwg
-TARGET_RECOVERY_DEVICE_MODULES := libinit_a5dwg
+#TARGET_INIT_VENDOR_LIB := libinit_a5dwg
+#TARGET_RECOVERY_DEVICE_MODULES := libinit_a5dwg
 
 # Inherit from the proprietary version
--include vendor/htc/a5dwg/BoardConfigVendor.mk
+-include vendor/htc/a3/BoardConfigVendor.mk

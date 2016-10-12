@@ -15,4 +15,4 @@
 #
 
 # Inherit from a5-common
-$(call inherit-product, device/htc/a5-common/a5-common.mk)
+$(call inherit-product, device/htc/a3-common/a3-common.mk)

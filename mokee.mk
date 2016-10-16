@@ -17,12 +17,12 @@
 $(call inherit-product, device/htc/a3/full_a3.mk)
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/mk/config/common_full_phone.mk)
 
 # Hardware
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS += \
-    device/htc/a3-common/cmhw \
-    hardware/cyanogen/cmhw
+    device/htc/a3/mkhw \
+    hardware/mokee/mkhw
 
-PRODUCT_NAME := cm_a3
+PRODUCT_NAME := mk_a3

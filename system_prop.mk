@@ -1,5 +1,5 @@
 #
-# Common system properties for a5
+# Common system properties for a3
 #
 
 # RIL
@@ -21,6 +21,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.rild.nitz_short_ons_2="" \
     persist.rild.nitz_short_ons_3="" \
     DEVICE_PROVISIONED=1
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    rild.libargs=-d /dev/smd0 \
+#   persist.radio.dont_use_dsd=true \
+#   ro.multisim.set_audio_params=true \
+#   ro.telephony.ril_class=A5RIL \
+#   ro.telephony.ril.config=simactivation,sim2gsmonly
 
 # QCOM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -56,7 +63,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     dev.pm.dyn_samplingrate=1 \
     persist.hwc.mdpcomp.enable=true \
-    ro.sf.lcd_density=320 \
+    ro.sf.lcd_density=240 \
     ro.opengles.version=196608
 
 # Input

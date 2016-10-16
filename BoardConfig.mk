@@ -20,9 +20,12 @@
 # definition file).
 #
 
-LOCAL_PATH := device/htc/a3-common
+LOCAL_PATH := device/htc/a3
 
 BOARD_VENDOR := htc
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := a3,a3ul,a3tl
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8226
@@ -52,10 +55,10 @@ TARGET_KERNEL_SOURCE := kernel/htc/msm8974
 TARGET_KERNEL_CONFIG := cm_a3_defconfig
 
 # Enable dex-preoptimization to speed up first boot sequence
-ifeq ($(HOST_OS),linux)
-WITH_DEXPREOPT := true
-DONT_DEXPREOPT_PREBUILTS := true
-endif
+#ifeq ($(HOST_OS),linux)
+#WITH_DEXPREOPT := true
+#DONT_DEXPREOPT_PREBUILTS := true
+#endif
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
@@ -66,6 +69,8 @@ AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
 AUDIO_FEATURE_ENABLED_HWDEP_CAL := true
 AUDIO_FEATURE_ENABLED_LOW_LATENCY_CAPTURE := true
 USE_CUSTOM_AUDIO_POLICY := 1
+AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
+# AUDIO_FEATURE_HTC_DUAL_SIM := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -138,13 +143,22 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_USES_MMCUTILS := true
-TARGET_RECOVERY_DEVICE_DIRS += device/htc/a3-common
+TARGET_RECOVERY_DEVICE_DIRS += device/htc/a3
 TARGET_RECOVERY_DEVICE_MODULES += chargeled
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 
+# RIL
+BOARD_PROVIDES_LIBRIL := true
+#BOARD_RIL_CLASS := ../../../device/htc/a5dwg/ril
+
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += device/htc/a3-common/sepolicy
+BOARD_SEPOLICY_DIRS += device/htc/a3/sepolicy
+
+# Vendor Init
+TARGET_UNIFIED_DEVICE := true
+#TARGET_INIT_VENDOR_LIB := libinit_a5dwg
+#TARGET_RECOVERY_DEVICE_MODULES := libinit_a5dwg
 
 # inherit from the proprietary version
--include vendor/htc/a3-common/BoardConfigVendor.mk
+-include vendor/htc/a3/BoardConfigVendor.mk

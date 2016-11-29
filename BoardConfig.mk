@@ -156,7 +156,7 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += device/htc/a3/sepolicy
 
 # Vendor Init
-TARGET_UNIFIED_DEVICE := true
+#TARGET_UNIFIED_DEVICE := true
 #TARGET_INIT_VENDOR_LIB := libinit_a5dwg
 #TARGET_RECOVERY_DEVICE_MODULES := libinit_a5dwg
 

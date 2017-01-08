@@ -24,14 +24,14 @@
 #
 
 # Inherit a5dwg-specific vendor tree
-$(call inherit-product-if-exists, vendor/htc/a5dwg/a5dwg-vendor.mk)
+$(call inherit-product-if-exists, vendor/htc/a3/a3-vendor.mk)
 
 # Inherit from a5dwg
-$(call inherit-product, device/htc/a5dwg/device.mk)
+$(call inherit-product, device/htc/a3/device.mk)
 
 # Set those variables here to overwrite the inherited values
-PRODUCT_NAME := full_a5dwg
-PRODUCT_DEVICE := a5dwg
+PRODUCT_NAME := full_a3
+PRODUCT_DEVICE := a3
 PRODUCT_BRAND := htc
 PRODUCT_MANUFACTURER := htc
-PRODUCT_MODEL := a5dwg
+PRODUCT_MODEL := a3

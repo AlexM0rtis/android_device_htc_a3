@@ -14,5 +14,9 @@
 # limitations under the License.
 #
 
-# Inherit from a5-common
-$(call inherit-product, device/htc/a3-common/a3-common.mk)
+$(call inherit-product, device/htc/a3/full_a3.mk)
+
+# Inherit some common LINEAGE stuff.
+$(call inherit-product, vendor/mk/config/common_full_phone.mk)
+
+PRODUCT_NAME := mk_a3

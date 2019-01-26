@@ -152,6 +152,7 @@ on post-fs-data
     mkdir /data/misc/location 0770 gps gps
     mkdir /data/misc/location/mq 0770 gps gps
     mkdir /data/misc/location/xtwifi 0770 gps gps
+    mkdir /data/misc/location 0770 gps gps
 
     #Create directory from IMS services
     mkdir /data/shared 0755 system system
@@ -509,6 +510,12 @@ service wcnss-service /system/bin/wcnss_service
     user system
     group system wifi qcom_diag radio
     oneshot
+
+#start GNSS/Sensor interface daemon
+service gsiff_daemon /system/bin/gsiff_daemon
+    class late_start
+    user system
+    group gps net_raw
 
 service wpa_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \

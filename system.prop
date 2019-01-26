@@ -24,9 +24,6 @@ persist.radio.jbims=1
 persist.rmnet.mux=enabled
 persist.data.iwlan.enable=true
 
-# Display Info
-ro.product.display_resolution = 4.7 inch qhd resolution
-
 # Camera Info
 ro.product.main_camera = 8M
 ro.product.front_camera = 1.3M
@@ -47,7 +44,6 @@ ro.qc.sdk.audio.fluencetype=fluence
 
 # GPS
 persist.gps.qc_nlp_in_use=0
-ro.gps.agps_provider=1
 ro.ril.def.agps.mode=2
 ro.ril.def.agps.feature=1
 

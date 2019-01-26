@@ -68,8 +68,15 @@ PRODUCT_PACKAGES += \
     liboverlay
 
 # GPS
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
+PRODUCT_PACKAGES += \
+    gps.msm8226
+
+PRODUCT_PACKAGES += \
+    gps.conf \
+    sap.conf
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.gps.agps_provider=1
 
 # Keylayouts
 PRODUCT_COPY_FILES += \

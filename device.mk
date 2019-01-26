@@ -107,22 +107,24 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml
 
-# NFC
-# ifeq ($(TARGET_BUILD_VARIANT),user)
-#    NFCEE_ACCESS_PATH := $(LOCAL_PATH)/configs/nfcee_access.xml
-# else
-#    NFCEE_ACCESS_PATH := $(LOCAL_PATH)/configs/nfcee_access_debug.xml
-# endif
+# NFC packages
+PRODUCT_PACKAGES += \
+    libnfc-nci \
+    libnfc_nci_jni \
+    NfcNci \
+    Tag \
+    com.android.nfc_extras
+#    nfc_nci.msm8226 \
+# NFCEE access control
+NFCEE_ACCESS_PATH := $(LOCAL_PATH)/rootdir/system/etc/nfcee_access.xml
 
-# PRODUCT_COPY_FILES += \
-#    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml \
-#    $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
-#    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/system/etc/nfcee_access.xml:system/etc/nfcee_access.xml
 
-# PRODUCT_PACKAGES += \
-#    NfcNci \
-#    Tag \
-#    com.android.nfc_extras
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/system/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    $(LOCAL_PATH)/rootdir/system/etc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
+    $(LOCAL_PATH)/rootdir/system/etc/nfc-nci.conf:system/etc/nfc-nci.conf
 
 # OMX
 PRODUCT_PACKAGES += \

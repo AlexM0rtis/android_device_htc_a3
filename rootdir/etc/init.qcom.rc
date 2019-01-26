@@ -75,6 +75,11 @@ on init
     chown system system /sys/class/power_supply/battery/disable_limit_chg
     chmod 0220 /sys/class/power_supply/battery/disable_limit_chg
 # HTC SSD Battery - END
+	
+    # NFC fix
+    symlink /dev/pn547 /dev/pn544
+    symlink /dev/pn547 /dev/pn54x
+    setprop ro.nfc.port "I2C"	
 
     # permissions for NFC
     chown nfc nfc /sys/class/NFC_sensor/comn/nxp_uicc_swp

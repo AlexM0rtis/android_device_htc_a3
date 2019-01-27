@@ -116,13 +116,15 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras
 #    nfc_nci.msm8226 \
 # NFCEE access control
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/system/etc/nfcee_access.xml:system/etc/nfcee_access.xml
+NFCEE_ACCESS_PATH := $(LOCAL_PATH)/rootdir/etc/nfcee_access.xml
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/system/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    $(LOCAL_PATH)/rootdir/system/etc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
-    $(LOCAL_PATH)/rootdir/system/etc/nfc-nci.conf:system/etc/nfc-nci.conf
+    $(COMMON_PATH)/rootdir/etc/nfcee_access.xml:system/etc/nfcee_access.xml
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    $(LOCAL_PATH)/rootdir/etc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
+    $(LOCAL_PATH)/rootdir/etc/nfc-nci.conf:system/etc/nfc-nci.conf
 
 # OMX
 PRODUCT_PACKAGES += \

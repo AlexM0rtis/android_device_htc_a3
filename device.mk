@@ -119,7 +119,7 @@ PRODUCT_PACKAGES += \
 NFCEE_ACCESS_PATH := $(LOCAL_PATH)/rootdir/etc/nfcee_access.xml
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/etc/nfcee_access.xml:system/etc/nfcee_access.xml
+    $(LOCAL_PATH)/rootdir/etc/nfcee_access.xml:system/etc/nfcee_access.xml
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \

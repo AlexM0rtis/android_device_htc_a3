@@ -135,5 +135,8 @@ WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+#Add LD_PRELOAD
+TARGET_LDPRELOAD += liblbs_core.so:lib_include_shim.so
+
 # inherit from the proprietary version
 -include vendor/htc/a3/BoardConfigVendor.mk

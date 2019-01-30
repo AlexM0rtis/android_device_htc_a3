@@ -35,6 +35,10 @@ on early-init
     write /sys/block/mmcblk1/bdi/read_ahead_kb 512
 
 on init
+    #Export LD_PRELOAD shyms
+    export LD_PRELOAD "lib_include_shim.so"
+    export LD_SHIM_LIBS /system/lib/liblbs_core.so|lib_include_shim.so
+
     # Set permissions for persist partition
     mkdir /persist 0771 system system
 
